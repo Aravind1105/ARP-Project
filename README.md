@@ -18,11 +18,11 @@ c)	Selecting Bachelor’s Subjects: Many students who don’t have a master’s 
 a)	Validate and Approve: Office staff help the students while filling the learning agreement and once the form is completed they will cross verify the common subjects between subjects listed by the student and the subjects in the bachelor’s degree transcript in order to restrict the student from studying the same subject which the student has already completed in the bachelor’s degree. After verifying the details and the striking off the subjects which are not allowed to take by the student due to completion of similar subjects in bachelor’s degree, they pass the form to Head of Faculty and Head of Examination for reviewing. Once the review is done, they scan the document and mail the scanned copy to the student.
 
 ## DRAWBACKS
-•	Student must visit the office and wait for the availability of the staff.
-•	Staff should maintain and evaluate large number of applications as the incoming students are more.
-•	Process of evaluating the application to mailing the scanned copy to the student takes a lot of manual work and     	    consumes time also more prone to errors.
-•	Staff must go through the transcript of each student which may consist of 40 subjects which is a stressful work.
-•	If the student doesn’t receive the approved learning agreement, attending the desired courses during starting few 	  weeks is not possible.
+1.	Student must visit the office and wait for the availability of the staff.
+2.	Staff should maintain and evaluate large number of applications as the incoming students are more.
+3.	Process of evaluating the application to mailing the scanned copy to the student takes a lot of manual work and     	    consumes time also more prone to errors.
+4.	Staff must go through the transcript of each student which may consist of 40 subjects which is a stressful work.
+5.	If the student doesn’t receive the approved learning agreement, attending the desired courses during starting few 	  weeks is not possible.
 
 ## FUTURE STATE
 Automating the Learning Agreement process will help students to know the courses they can take, thereby eliminating confusion. Our main aim is to reduce the human effort involved in signing learning agreement process between students and University.
