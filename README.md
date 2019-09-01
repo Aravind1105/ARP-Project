@@ -39,11 +39,55 @@ Automating the Learning Agreement process will help students to know the courses
 4.	If there are any duplication of subjects, reject those subjects and approve the learning agreement otherwise, approve 	      all subjects and the learning agreement.
 5.	The approved learning agreement can be downloaded as PDF by students for their reference.
 
+# WORKFLOW
+
+![workflow](https://user-images.githubusercontent.com/52786804/64074522-a408eb80-ccac-11e9-87b6-a15fc3e62eff.png)
 
 # ARCHITECTURE
 
+![ALAP Architecture](https://user-images.githubusercontent.com/52786804/64074490-46749f00-ccac-11e9-8290-0a9c6c701437.png)
 
-![ALAP Architecture](https://user-images.githubusercontent.com/52786804/64074473-f564ab00-ccab-11e9-9513-4c5c25d9e9a7.png)
+The application was developed using a 3-tier architecture where the layers were divided for abstraction, modularity and maintainability. The different layers are: 
+1.	Client layer
+2.	Service layer/Middleware
+3.	Data layer
 
+## Client layer
+The client layer is responsible for rendering the interface to the user. The client interface was mainly developed to support desktop monitors and laptops. Client layer was developed using React.js – A JavaScript framework that runs on the node server. React js renders every user screen as a component. The client layer communicates with the Service layer by REST API. A set of endpoints that runs as a micro service is exposed on the server by URL and the client invokes the REST URL to fetch, create and modify data in the server. 
+
+## Service layer
+The service layer is designed as a micro service architecture where the components are divided into 3 micro services.
+
+## ALAP API:
+The ALAP API micro services are responsible for fetching, creating and updating user information and learning agreement related information from the database. This consists of a list of methods exposed as an API that can be invoked by the client. The micro service is hosted using ngrok which exposes the API endpoint to the internet which makes it easy to integrate against the client layer.
+
+## Subject Extraction API:
+A micro service developed in python, the subject extraction API is responsible for extracting the subject names amongst the string of words extracted from the student’s transcript. The micro service is exposed as API which can be accessed using an endpoint. It makes use of the Naïve Bayes classifier to classify the words and extract only the words which resembles the name of the subject and ignoring other details such as personal details of the student.
+
+## Subject Comparison API:
+The subject comparison is a python micro service which is used to compare the transcript subject with the subjects offered by the university. This was developed as a proof of concept and was not used for the actual implementation of the application.
+
+## OCR Space API:
+The OCR Space API is a third-party API which is used to perform Optical Character Recognition (OCR) in order to extract words from image. The free version of OCR Space API is used in the project implementation in which a REST endpoint is exposed, and the transcript is converted as a base64 string and uploaded to the endpoint. The API returns all the words extracted from the transcript in JSON format.
+
+## Data Layer
+The data layer consists of the database repository which stores and retrieves data based on the user request.  Microsoft SQL Server is used as the database in the project implementation. The data is stored and retrieved using stored procedure and queries. The database is connected to the ALAP API application which invokes the database using an Object Relational Model (ORM) called Dapper. The Dapper framework converts the request object into a database object and performs Create, Update, Read and Delete operations.
+
+# MACHINE LEARNING ALGORITHM
+The machine learning algorithm implemented in previous iteration was based on creating feature sets by using a feature extractor method. This method is search for a ‘feature’ in an input string and return the value as per the feature defined. During last project phase the features chosen were meagre in nature. To improve the process, more features were added to be considered as classifiers. The algorithm of previous implementation used feature to look for suffixes like ‘-ics’, ‘-ing’,’-ter’. The feature extractor method returned true if the input string consisted of these letters. A tuple of subject words tagged as ‘Subject’ and random words as ‘Not Subject’ is used to create a set of labelled words. Feature extractor method is used by classifier to create a feature set based on each labelled word having a feature to be likely either a ‘Subject’ or ‘Not Subject’. It worked based on the concept of ‘likelihood ratio’, which says that if a input string has a feature A, then it is more likely to be a ‘Subject’ as compared to a ‘Not Subject’.  Based on this likelihood ratio each new word is classified as a subject or random word. The classifier is then given the words extracted from PDF using OCR Space as input. This classifier was able to classify words as a subject with a certainty of around 68%. 
+
+# PROCESS DESCRIPTION
+
+![Description](https://user-images.githubusercontent.com/52786804/64074473-f564ab00-ccab-11e9-9513-4c5c25d9e9a7.png)
+
+
+
+# RESULTS
+
+![Register](https://user-images.githubusercontent.com/52786804/64074495-699f4e80-ccac-11e9-89f4-f2e4418eb19a.png)
+![StudentDetails](https://user-images.githubusercontent.com/52786804/64074497-6a37e500-ccac-11e9-84b5-5505b83e6efe.png)
+![Subject Status](https://user-images.githubusercontent.com/52786804/64074498-6a37e500-ccac-11e9-80af-d547dd42a694.png)
+![Upload Transcript](https://user-images.githubusercontent.com/52786804/64074499-6a37e500-ccac-11e9-8ad1-0c5b0e42f295.png)
+![Validate by Admin](https://user-images.githubusercontent.com/52786804/64074500-6a37e500-ccac-11e9-8bda-20e495c811f3.png)
 
 
