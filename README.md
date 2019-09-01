@@ -43,7 +43,7 @@ Automating the Learning Agreement process will help students to know the courses
 # ARCHITECTURE
 
 
-![ALAP Architecture](Images/Picture 2.png)
+![ALAP Architecture](https://user-images.githubusercontent.com/52786804/64074473-f564ab00-ccab-11e9-9513-4c5c25d9e9a7.png)
 
 
 
