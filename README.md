@@ -20,26 +20,30 @@ a)	Validate and Approve: Office staff help the students while filling the learni
 ## DRAWBACKS
 •	Student must visit the office and wait for the availability of the staff.
 •	Staff should maintain and evaluate large number of applications as the incoming students are more.
-•	Process of evaluating the application to mailing the scanned copy to the student takes a lot of manual work and consumes time also more prone to errors.
+•	Process of evaluating the application to mailing the scanned copy to the student takes a lot of manual work and     	    consumes time also more prone to errors.
 •	Staff must go through the transcript of each student which may consist of 40 subjects which is a stressful work.
-•	If the student doesn’t receive the approved learning agreement, attending the desired courses during starting few weeks is not possible.
+•	If the student doesn’t receive the approved learning agreement, attending the desired courses during starting few 	  weeks is not possible.
 
 ## FUTURE STATE
 Automating the Learning Agreement process will help students to know the courses they can take, thereby eliminating confusion. Our main aim is to reduce the human effort involved in signing learning agreement process between students and University.
 
 ## From student perspective: 
-1.	If student is a new user, then register and login to the portal we have developed with his/her matriculation number and       mail Id.
-2.	After login, students can create a learning agreement by uploading the transcript and selecting the desired subjects to       submit.
+1.	If student is a new user, then register and login to the portal we have developed with his/her matriculation number 	    and mail Id.
+2.	After login, students can create a learning agreement by uploading the transcript and selecting the desired subjects 	     to submit.
 3.	If student is an existing user, students are allowed to only modify the learning agreement by choosing the desired             subjects and submit.
 
 ## From office staff perspective: 
 1.	Login to the portal as admin.
 2.	The uploaded transcript of the student and the subjects he / she can take is reflected. 
 3.	Verify the requested subjects with his/her transcript for any duplication.
-4.	If there are any duplication of subjects, reject those subjects and approve the learning agreement otherwise, approve all     subjects and the learning agreement.
+4.	If there are any duplication of subjects, reject those subjects and approve the learning agreement otherwise, approve 	      all subjects and the learning agreement.
 5.	The approved learning agreement can be downloaded as PDF by students for their reference.
 
 
+# ARCHITECTURE
+
+
+![ALAP Architecture](Images/Picture 2.png)
 
 
 
