@@ -86,8 +86,8 @@ The machine learning algorithm implemented in previous iteration was based on cr
 
 ![Register](https://user-images.githubusercontent.com/52786804/64074495-699f4e80-ccac-11e9-89f4-f2e4418eb19a.png)
 ![StudentDetails](https://user-images.githubusercontent.com/52786804/64074497-6a37e500-ccac-11e9-84b5-5505b83e6efe.png)
-![Subject Status](https://user-images.githubusercontent.com/52786804/64074498-6a37e500-ccac-11e9-80af-d547dd42a694.png)
 ![Upload Transcript](https://user-images.githubusercontent.com/52786804/64074499-6a37e500-ccac-11e9-8ad1-0c5b0e42f295.png)
+![Available Subjects](https://user-images.githubusercontent.com/52786804/64074995-b1c16f80-ccb2-11e9-8232-d7952164f7d6.png)
 ![Validate by Admin](https://user-images.githubusercontent.com/52786804/64074500-6a37e500-ccac-11e9-8bda-20e495c811f3.png)
-
+![Subject Status](https://user-images.githubusercontent.com/52786804/64074498-6a37e500-ccac-11e9-80af-d547dd42a694.png)
 
